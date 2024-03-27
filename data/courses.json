@@ -54,12 +54,12 @@
           "id": "ans-7"
         },
         {
-          "isCorrect": false,
+          "isCorrect": true,
           "text": "#header",
           "id": "ans-8"
         },
         {
-          "isCorrect": true,
+          "isCorrect": false,
           "text": "header",
           "id": "ans-9"
         }
@@ -70,7 +70,7 @@
       "id": 4,
       "answers": [
         {
-          "isCorrect": false,
+          "isCorrect": true,
           "text": "p {font-weight: bold;}",
           "id": "ans-10"
         },
@@ -80,7 +80,7 @@
           "id": "ans-11"
         },
         {
-          "isCorrect": true,
+          "isCorrect": false,
           "text": "p {bold: true;}",
           "id": "ans-12"
         }
