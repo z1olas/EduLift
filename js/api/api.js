@@ -1,7 +1,7 @@
 import { formResult } from "../functions/form.js";
 
 export const courseConnectDisplay = (testId, form) => {
-    fetch('../data/courses.json')
+    fetch('data/courses.json')
     .then((response) => {
         if (!response.ok) {
             throw new Error
@@ -35,7 +35,7 @@ export const courseConnectDisplay = (testId, form) => {
 }
 
 export const courseTestSubmit = (testId, questions, answers) => {
-    fetch('../data/courses.json')
+    fetch('data/courses.json')
     .then((response) => {
         if (!response.ok) {
             throw new Error
