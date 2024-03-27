@@ -1,0 +1,92 @@
+{
+  "quiz": {
+    "id": "test-1",
+    "questions": [
+      {
+        "question": "What does CSS stand for?",
+      "id": 1,
+      "answers": [
+        {
+          "isCorrect": false,
+          "text": "Computer Style Sheets",
+          "id": "ans-1"
+        },
+        {
+          "isCorrect": false,
+          "text": "Creative Style Sheets",
+          "id": "ans-2"
+        },
+        {
+          "isCorrect": true,
+          "text": "Cascading Style Sheets",
+          "id": "ans-3"
+        }
+      ]
+    },
+    {
+      "question": "Which CSS property is used to change the background color of an element?",
+      "id": 2,
+      "answers": [
+        {
+          "isCorrect": true,
+          "text": "background-color",
+          "id": "ans-4"
+        },
+        {
+          "isCorrect": false,
+          "text": "color",
+          "id": "ans-5"
+        },
+        {
+          "isCorrect": false,
+          "text": "font-size",
+          "id": "ans-6"
+        }
+      ]
+    },
+    {
+      "question": "How do you select an element with id 'header' in CSS?",
+      "id": 3,
+      "answers": [
+        {
+          "isCorrect": false,
+          "text": ".header",
+          "id": "ans-7"
+        },
+        {
+          "isCorrect": false,
+          "text": "#header",
+          "id": "ans-8"
+        },
+        {
+          "isCorrect": true,
+          "text": "header",
+          "id": "ans-9"
+        }
+      ]
+    },
+    {
+      "question": "What is the correct CSS syntax for making all '&ltp&gt;' elements bold?",
+      "id": 4,
+      "answers": [
+        {
+          "isCorrect": false,
+          "text": "p {font-weight: bold;}",
+          "id": "ans-10"
+        },
+        {
+          "isCorrect": false,
+          "text": "p {text-style: bold;}",
+          "id": "ans-11"
+        },
+        {
+          "isCorrect": true,
+          "text": "p {bold: true;}",
+          "id": "ans-12"
+        }
+      ]
+    }
+  ]
+  }
+}
+  

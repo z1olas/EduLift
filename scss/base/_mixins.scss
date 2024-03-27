@@ -1,0 +1,48 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1180px,
+  xxl: 1440px
+);
+
+@mixin media-breakpoint-up($name) {
+  $breakpoint-value: map-get($grid-breakpoints, $name);
+  @if $breakpoint-value != null {
+    @media all and (min-width: $breakpoint-value) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-down($name) {
+  $breakpoint-value: map-get($grid-breakpoints, $name);
+  @if $breakpoint-value != null {
+    // Adjusting by 1px to avoid overlap with media-breakpoint-up
+    $breakpoint-value-adjusted: $breakpoint-value - 1px;
+    @media all and (max-width: $breakpoint-value-adjusted) {
+      @content;
+    }
+  }
+}
+
+// EXAMPLE OF USAGE
+// 
+// above xl (1180px)
+// 
+// @include media-breakpoint-up(xl) {
+//   body {
+//     background-color: #000;
+//   }
+// }
+
+// 
+// bellow xl (1180px)
+// 
+
+// @include media-breakpoint-down(xl) {
+//   body {
+//     background-color: #9113ff;
+//   }
+// }

@@ -1,0 +1,67 @@
+$padding: 100px;
+.l-sec {
+    overflow-x: hidden;
+
+    &--pt-full {
+        padding-top: $padding;
+        @include media-breakpoint-down(xl) {
+            padding-top: calc($padding * 0.8);
+        }
+        @include media-breakpoint-down(lg) {
+            padding-top: calc($padding * 0.6);
+        }
+    }
+
+    &--pb-full {
+        padding-bottom: $padding;
+        @include media-breakpoint-down(xl) {
+            padding-bottom: calc($padding * 0.8);
+        }
+        @include media-breakpoint-down(lg) {
+            padding-bottom: calc($padding * 0.6);
+        }
+    }
+    &--py-half {
+        padding-top: calc($padding / 2);
+        padding-bottom: calc($padding / 2);
+        @include media-breakpoint-down(xl) {
+            padding-top: calc(($padding * 0.8) / 2);
+            padding-bottom: calc(($padding * 0.8) / 2);
+        }
+        @include media-breakpoint-down(lg) {
+            padding-top: calc($padding * 0.6 / 2);
+            padding-bottom: calc(($padding * 0.6 / 2));
+        }
+    }
+    &--py-full {
+        padding-top: $padding;
+        padding-bottom: $padding;
+        @include media-breakpoint-down(xl) {
+            padding-top: calc($padding * 0.8);
+            padding-bottom: calc($padding * 0.8);
+        }
+        @include media-breakpoint-down(lg) {
+            padding-top: calc($padding * 0.6);
+            padding-bottom: calc($padding * 0.6);
+        }
+    }
+    &--pt-half {
+        padding-top: calc($padding / 2);
+        @include media-breakpoint-down(xl) {
+            padding-top: calc(($padding * 0.8) / 2);
+        }
+        @include media-breakpoint-down(lg) {
+            padding-top: calc(($padding * 0.6) / 2);
+        }
+    }
+    
+    &--pb-half {
+        padding-bottom: calc($padding / 2);
+        @include media-breakpoint-down(xl) {
+            padding-bottom: calc(($padding * 0.8) / 2);
+        }
+        @include media-breakpoint-down(lg) {
+            padding-bottom: calc(($padding * 0.6) / 2);
+        }
+    }
+}

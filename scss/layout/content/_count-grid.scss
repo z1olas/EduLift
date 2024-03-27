@@ -1,0 +1,36 @@
+.l-sec--count-grid {
+    .custom-grid {
+        gap: 40px;
+        @include media-breakpoint-down(sm) {
+            gap: 20px;
+        }
+        flex-wrap: wrap;
+        &__single {
+            box-shadow: $box-shadow;
+            width: calc((100% - 120px) / 4);
+            @include media-breakpoint-down(lg) {
+                width: calc((100% - 40px) / 2);
+            }
+            @include media-breakpoint-down(sm) {
+                width: calc((100% - 20px) / 2);
+            }
+            // @include media-breakpoint-down(md) {
+            //     width: 100%;
+            // }
+            background-color: $secondary-color;
+            padding-top: calc($padding / 2);
+            padding-bottom: calc($padding / 2);
+            border-radius: $radius;
+            text-align: center;
+            .number {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 120%;
+                margin-bottom: 16px;
+                color: $primary-color;
+            }
+        }
+    }
+}

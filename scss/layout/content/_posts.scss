@@ -1,0 +1,83 @@
+.l-sec--posts {
+    .btn {
+        display: block;
+        width: fit-content;
+    }
+
+    .btn--mobile {
+        margin-top: 40px;
+    }
+
+    .intro {
+        margin-bottom: 40px;
+    }
+
+    .grid {
+        gap: 40px;
+        flex-wrap: wrap;
+        .single-post {
+            box-shadow: $box-shadow;
+            width: calc((100% - 80px) / 3);
+            @include media-breakpoint-down(lg) {
+                width: calc((100% - 40px) / 2);
+            }
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+            background-color: #FFFFFF;
+            border-radius: $radius;
+            overflow: hidden;
+            border: 1px solid #EAEAEA;
+            transition: box-shadow 0.3s ease;
+            position: relative;
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            .cost {
+                position: absolute;
+                padding: 8px 12px;
+                top: 20px;
+                left: 20px;
+                background-color: #fff;
+                border-radius: $radius;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 150%;
+                color: #333333;
+            }
+            &__image {
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                    height: 280px;
+                    object-fit: cover;
+                    border-top-left-radius: $radius;
+                    border-top-right-radius: $radius;
+                }
+            }
+            &__content {
+                padding: 24px;
+                h4, p.text, .logo {
+                    margin-bottom: 10px;
+                }
+                .info {
+                    gap: 24px;
+                    time, span {
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: #555555;
+                    }
+                }
+            }
+        }
+    }
+}

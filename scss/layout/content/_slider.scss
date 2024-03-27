@@ -1,0 +1,170 @@
+.l-sec--students {
+    .intro {
+        margin-bottom: 40px;
+    }
+    .swiper {
+        padding-bottom: 48px;
+        overflow: unset;
+        &::after, &::before {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 900px;
+            position: absolute;
+            background-color: #fff;
+            z-index: 999;
+            top: 0;
+        }
+        &::before {
+            left: 100%;
+        }
+        &::after {
+            right: 100%;
+        }
+        .swiper-wrapper {
+            cursor: grab;
+        }
+        .swiper-slide {
+            border-radius: 10px;
+            box-shadow: $box-shadow;
+            padding: 40px 30px 70px;
+            background-color: $secondary-color;
+            height: unset;
+            .rate {
+                gap: 5px;
+                margin-bottom: 24px;
+                img {
+                    opacity: 0.3;
+                }
+                &.one-starts {
+                    @for $i from 1 through 1 {
+                        img:nth-child(#{$i}) {
+                            opacity: 1;
+                        }
+                    }
+                }
+                &.two-starts {
+                    @for $i from 1 through 2 {
+                        img:nth-child(#{$i}) {
+                            opacity: 1;
+                        }
+                    }
+                }
+                &.three-starts {
+                    @for $i from 1 through 3 {
+                        img:nth-child(#{$i}) {
+                            opacity: 1;
+                        }
+                    }
+                }
+                &.four-starts {
+                    @for $i from 1 through 4 {
+                        img:nth-child(#{$i}) {
+                            opacity: 1;
+                        }
+                    }
+                }
+                &.five-starts {
+                    @for $i from 1 through 5 {
+                        img:nth-child(#{$i}) {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            p {
+                margin-bottom: 24px;
+            }
+            .person {
+                gap: 12px;
+                .name {
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #333333;
+                }
+                .text {
+                    margin-bottom: 0;
+                    color: #4F4E4E;
+                }
+            }
+        }
+        .swiper-pagination {
+            bottom: 0px;
+            top: unset;
+            .swiper-pagination-bullet {
+                box-shadow: $box-shadow;
+                height: 8px;
+                background-color: $primary-color;
+                opacity: 0.4;
+                width: 16px;
+                transition: $trans ease-in;
+                border-radius: 4px;
+                &-active {
+                    width: 46px;
+                    opacity: 1;
+                }
+            }
+        }
+        .swiper-btn {
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+            width: 150px;
+            position: absolute;
+            top: -80px;
+            right: 0;
+            .swiper-button-prev {
+                right: unset;
+                left: 0;
+            }
+            .swiper-button-next {
+                left: unset;
+                right: 0;
+            }
+            .swiper-button-prev,.swiper-button-next {
+                box-shadow: $box-shadow;
+                width: 64px;
+                height: 55px;
+                border: 1px solid $primary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                border-radius: $radius;
+                transition: .4s ease-in;
+                svg path {
+                    transition: .4s ease;
+                }
+                svg {
+                    height: 24px !important;
+                    width: 24px !important;
+                }
+                &::after {
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: $primary-color;
+                    transition: .4s ease-in;
+                    display: none;
+                }
+                &:hover {
+                    background-color: $primary-color;
+                    svg {
+                        path {
+                            stroke: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(md) {
+            // padding-top: 95px;
+            .swiper-btn {
+                top: 20px;
+                right: unset;
+                left: 0;
+            }
+        }
+    }
+}

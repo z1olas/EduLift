@@ -1,0 +1,44 @@
+.l-sec--accordion {
+    .intro {
+        margin-bottom: 80px;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 60px;
+        }
+    }
+    .accordion-item {
+        border: none;
+        margin-bottom: 40px;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 20px;
+        }
+        .accordion-header {
+            &:hover {
+                strong {
+                    color: $primary-color;
+                }
+            }
+            button {
+                box-shadow: none;
+                border-bottom: 1px solid $secondary-color;
+            }
+            strong {
+                color: #333333;
+                transition: .3s ease-in;
+            }
+        }
+        .accordion-button {
+            gap: 20px;
+            &::after {
+                background-image: url('../images/icons/plus-solid.svg');
+            }
+            &:not(.collapsed) {
+                &::after {
+                    background-image: url('../images/icons/minus-solid.svg');
+                }
+            }
+        }
+        * {
+            background-color: transparent;
+        }
+    }
+}
