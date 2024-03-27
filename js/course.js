@@ -32,3 +32,16 @@ formSubmit.addEventListener('click', (e) => {
         courseTestSubmit(jsTest.dataset.id, questions, answers);
     }
 })
+
+// Animation
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+const section = document.querySelectorAll('section');
+section.forEach((el)=> observer.observe(el));
